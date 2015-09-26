@@ -15,15 +15,15 @@
   function PlayController($routeParams, $location) {
 
     var self = this;
+    var cardsNum = parseInt($routeParams.pairsNum) * 2;
 
-    console.log('controller started routeParams = ', $routeParams);
+    console.log('controller started cardsNum = ', cardsNum);
 
     self.cards = [];
-    for (var i = 0; i < 52; i++) {
+    for (var i = 0; i < cardsNum; i++) {
       self.cards.push({});
     }
 
   }
-
 
 })();

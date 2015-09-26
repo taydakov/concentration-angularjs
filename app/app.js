@@ -41,17 +41,17 @@
       .when('/', {
         templateUrl: 'app/views/setup.html',
         controller: 'SetupController',
-        controllerAs: 'main'
+        controllerAs: 'setup'
       })
-      .when('/play/:cardsNum', {
+      .when('/play/:pairsNum', {
         templateUrl: 'app/views/play.html',
         controller: 'PlayController',
-        controllerAs: 'main'
+        controllerAs: 'play'
       })
-      .when('/congratulations', {
-        templateUrl: 'app/views/congratulations.html',
+      .when('/results', {
+        templateUrl: 'app/views/results.html',
         controller: 'ResultsController',
-        controllerAs: 'main'
+        controllerAs: 'results'
       })
       .otherwise({
         redirectTo: '/'

@@ -2,8 +2,8 @@
 <div class="difficulty-selection">
   <span class="difficulty-label">Choose difficulty</span>
   <ul class="difficulty-levels">
-    <li><div class="hard-level" ng-click="main.play(25)"><span class="level-label">Hard</span><span class="level-pairs">25 pairs</span></div></li>
-    <li><div class="medium-level" ng-click="main.play(12)"><span class="level-label">Medium</span><span class="level-pairs">12 pairs</span></div></li>
-    <li><div class="easy-level" ng-click="main.play(6)"><span class="level-label">Easy</span><span class="level-pairs">6 pairs</span></div></li>
+    <li><div class="hard-level btn btn-danger" ng-click="setup.play(setup.hardPairsNum)"><span class="level-label">Hard</span><span class="level-pairs">{{ setup.hardPairsNum }} pairs</span></div></li>
+    <li><div class="medium-level btn btn-warning" ng-click="setup.play(setup.mediumPairsNum)"><span class="level-label">Medium</span><span class="level-pairs">{{ setup.mediumPairsNum }} pairs</span></div></li>
+    <li><div class="easy-level btn btn-default" ng-click="setup.play(setup.easyPairsNum)"><span class="level-label">Easy</span><span class="level-pairs">{{ setup.easyPairsNum }} pairs</span></div></li>
   </ul>
 </div>

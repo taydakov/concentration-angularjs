@@ -7720,7 +7720,7 @@ ul.difficulty-levels {
 .easy-level, .medium-level, .hard-level {
   font-family: "Josefin Slab Bold";
   display: inline-block;
-  background-color: #cf5037;
+  /*background-color: #cf5037;*/
   color: white;
   padding: 0.3em 0.9em 0.4em;
   margin: 0.5em;
@@ -7729,10 +7729,10 @@ ul.difficulty-levels {
   cursor: pointer; }
 
 .easy-level {
-  background-color: #226ed7; }
+  /*background-color: #226ed7;*/ }
 
 .medium-level {
-  background-color: #f0ad4e; }
+  /*background-color: #f0ad4e;*/ }
 
 .level-label {
   display: block;
