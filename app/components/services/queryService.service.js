@@ -34,7 +34,7 @@
 
 
   angular
-    .module('boilerplate')
+    .module('concentrationGame')
     .factory('QueryService', [
       '$http', '$q', 'CONSTANTS', QueryService
     ]);

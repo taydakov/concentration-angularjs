@@ -51,7 +51,6 @@
 	<!-- build:libs js/libs.js -->
 	<script type="text/javascript" src="js/nonangular/lodash.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
-	<script type="text/javascript" src="bower_components/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>
 	<!-- endbuild -->
 
 	<!-- Angular external libraries for application -->
@@ -65,17 +64,17 @@
 	<!-- build:appcomponents js/appcomponents.js -->
 	<script type="text/javascript" src="app/app.js"></script>
 	<script type="text/javascript" src="app/config.js"></script>
-	<script type="text/javascript" src="components/services/LocalStorage.service.js"></script>
-	<script type="text/javascript" src="components/services/queryService.service.js"></script>
-	<script type="text/javascript" src="components/directives/main.nav.directive.js"></script>
-	<script type="text/javascript" src="components/directives/responsive.nav.directive.js"></script>
-	<script type="text/javascript" src="components/directives/owl.slider.directive.js"></script>
+	<script type="text/javascript" src="app/components/services/LocalStorage.service.js"></script>
+	<script type="text/javascript" src="app/components/services/queryService.service.js"></script>
+	<script type="text/javascript" src="app/components/directives/responsive.nav.directive.js"></script>
 	<!-- endbuild -->
 
 	<!-- Application sections -->
 	<!-- build:mainapp js/mainapp.js -->
 	<script type="text/javascript" src="app/factory.js"></script>
-	<script type="text/javascript" src="app/controller.js"></script>
+	<script type="text/javascript" src="app/controllers/SetupController.js"></script>
+	<script type="text/javascript" src="app/controllers/PlayController.js"></script>
+	<script type="text/javascript" src="app/controllers/ResultsController.js"></script>
 	<!-- endbuild -->
 
 	<!-- templates from $templateCache -->

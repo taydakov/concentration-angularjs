@@ -7725,7 +7725,8 @@ ul.difficulty-levels {
   padding: 0.3em 0.9em 0.4em;
   margin: 0.5em;
   width: 100%;
-  max-width: 300px; }
+  max-width: 300px;
+  cursor: pointer; }
 
 .easy-level {
   background-color: #226ed7; }
@@ -7821,6 +7822,7 @@ ul.difficulty-levels {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 1;
   width: 100%;
   color: white;
   text-transform: uppercase;

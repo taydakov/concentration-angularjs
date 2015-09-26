@@ -39,18 +39,18 @@
     // routes
     $routeProvider
       .when('/', {
-        templateUrl: 'views/setup.html',
-        controller: 'MainController',
+        templateUrl: 'app/views/setup.html',
+        controller: 'SetupController',
         controllerAs: 'main'
       })
-      .when('/game', {
-        templateUrl: 'views/game.html',
-        controller: 'MainController',
+      .when('/play/:cardsNum', {
+        templateUrl: 'app/views/play.html',
+        controller: 'PlayController',
         controllerAs: 'main'
       })
       .when('/congratulations', {
-        templateUrl: 'views/congratulations.html',
-        controller: 'MainController',
+        templateUrl: 'app/views/congratulations.html',
+        controller: 'ResultsController',
         controllerAs: 'main'
       })
       .otherwise({
