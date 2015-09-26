@@ -42,9 +42,6 @@ html {
 body {
   margin: 0; }
 
-html, body, body > .ng-scope {
-  height: 100%; }
-
 a:focus {
   outline: thin dotted; }
 
@@ -7699,17 +7696,14 @@ ul.social-icons .icon:hover {
 .footer p {
   margin-bottom: 0; }
 
-/* Views */
 .difficulty-selection {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   text-align: center; }
 
 .difficulty-label {
   text-transform: uppercase;
   text-align: center;
   font-size: 2em;
+  font-family: "Josefin Slab Light";
   color: #cf5037; }
 
 ul.difficulty-levels {
@@ -7723,9 +7717,7 @@ ul.difficulty-levels {
   background-color: #cf5037;
   color: white;
   padding: 0.3em 0.9em 0.4em;
-  margin: 0.5em;
-  width: 100%;
-  max-width: 300px; }
+  margin: 0.5em; }
 
 .easy-level {
   background-color: #226ed7; }
@@ -7735,6 +7727,7 @@ ul.difficulty-levels {
 
 .level-label {
   display: block;
+  width: 300px;
   font-size: 1.5em;
   vertical-align: middle;
   padding-top: 0.5em; }
@@ -7744,9 +7737,14 @@ ul.difficulty-levels {
   vertical-align: middle;
   margin-top: -2em; }
 
+.concentrate-label {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2em;
+  font-family: "Josefin Slab Light";
+  color: #cf5037; }
+
 .flip-cards-container {
-  position: relative;
-  top: 3em;
   text-align: center; }
 
 .flip-cards-grid {
@@ -7790,8 +7788,6 @@ ul.difficulty-levels {
 /* Progress indicator */
 .progress {
   position: fixed;
-  left: 0;
-  bottom: 0;
   bottom: 0;
   width: 100%; }
 
@@ -7799,32 +7795,15 @@ ul.difficulty-levels {
   font-family: "Josefin Slab Bold";
   background-color: #cf5037; }
 
-.congratulations-container {
+html, body {
+  height: 100%; }
+
+.congratulations-label {
   position: relative;
   top: 50%;
   text-align: center;
-  transform: translateY(-50%); }
-
-.congratulations-label {
+  transform: translateY(-50%);
   font-family: "Josefin Slab Bold";
   font-size: 2em;
   color: #cf5037;
   text-transform: uppercase; }
-
-.play-again-label {
-  cursor: pointer;
-  max-width: 200px;
-  margin: auto; }
-
-/* Components */
-.concentration-label {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 2em;
-  font-family: "Josefin Slab Light";
-  background-color: #cf5037; }

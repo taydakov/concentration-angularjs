@@ -1,0 +1,22 @@
+<div class="concentration-label">Concentration Game</div>
+<div class="flip-cards-container" ng-controller="DefaultController as cntr">
+  <ul class="flip-cards-grid">
+    <li class="flip-card" ng-repeat="card in cntr.cards">
+      <div class="flip-container">
+        <div class="flipper">
+          <div class="flip-card-front">
+            <img class="flip-card-image" src="/images/cards/hidden_card.png" />
+          </div>
+          <div class="flip-card-back">
+            <img class="flip-card-image" src="/images/cards/red_joker.png" />
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+    4 pairs
+  </div>
+</div>

@@ -39,17 +39,17 @@
     // routes
     $routeProvider
       .when('/', {
-        templateUrl: 'views/home.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
-      .when('/contact', {
-        templateUrl: 'views/contact.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
-      .when('/setup', {
         templateUrl: 'views/setup.html',
+        controller: 'MainController',
+        controllerAs: 'main'
+      })
+      .when('/game', {
+        templateUrl: 'views/game.html',
+        controller: 'MainController',
+        controllerAs: 'main'
+      })
+      .when('/congratulations', {
+        templateUrl: 'views/congratulations.html',
         controller: 'MainController',
         controllerAs: 'main'
       })
