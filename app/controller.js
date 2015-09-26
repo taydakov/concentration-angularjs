@@ -8,7 +8,7 @@
 ;(function() {
 
   angular
-    .module('boilerplate')
+    .module('concentrationGame')
     .controller('MainController', MainController);
 
   MainController.$inject = ['LocalStorage', 'QueryService'];
@@ -19,6 +19,10 @@
     // 'controller as' syntax
     var self = this;
 
+    self.cards = [];
+    for (var i = 0; i < 52; i++) {
+      self.cards.push({});
+    }
 
     ////////////  function definitions
 

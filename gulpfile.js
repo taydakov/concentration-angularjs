@@ -1,10 +1,9 @@
 /**
- * @author  Jozef Butko
- * @url		  www.jozefbutko.com/resume
- * @date    March 2015
+ * @author  Lev Taydakov
+ * @url		  taydakov.com
+ * @date    September 2015
  * @license MIT
  *
- * AngularJS Boilerplate: Build, watch and other useful tasks
  *
  * The build process consists of following steps:
  * 1. clean /_build folder

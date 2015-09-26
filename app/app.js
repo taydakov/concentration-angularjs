@@ -1,11 +1,11 @@
 /**
  * 
- * AngularJS Boilerplate
- * @description           Description
- * @author                Jozef Butko // www.jozefbutko.com/resume
- * @url                   www.jozefbutko.com
- * @version               1.1.7
- * @date                  March 2015
+ * Concentration Game in AngularJS
+ * @description           Classical cards matching game written in AngularJS
+ * @author                Lev Taydakov
+ * @url                   taydakov.com
+ * @version               0.0.1
+ * @date                  September 2015
  * @license               MIT
  * 
  */
@@ -16,7 +16,7 @@
    * Definition of the main app module and its dependencies
    */
   angular
-    .module('boilerplate', [
+    .module('concentrationGame', [
       'ngRoute'
     ])
     .config(config);
@@ -68,7 +68,7 @@
    * 
    */
   angular
-    .module('boilerplate')
+    .module('concentrationGame')
     .factory('authInterceptor', authInterceptor);
 
   authInterceptor.$inject = ['$rootScope', '$q', 'LocalStorage', '$location'];
@@ -100,7 +100,7 @@
    * Run block
    */
   angular
-    .module('boilerplate')
+    .module('concentrationGame')
     .run(run);
 
   run.$inject = ['$rootScope', '$location'];
