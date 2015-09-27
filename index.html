@@ -25,9 +25,7 @@
 		<meta name="msapplication-TileColor" content="#f01d4f">
 
 		<!-- CSS -->
-		<!-- build:css css/style.min.css -->
-		<link rel="stylesheet" type="text/css" href="styles/style.css" />
-		<!-- endbuild -->
+		<link rel="stylesheet" href="css/style.min.css"/>
 
 	</head>
 
@@ -43,37 +41,18 @@
 	</body>
 
 	<!-- Vendors -->
-	<!-- build:libs js/libs.js -->
-	<script type="text/javascript" src="bower_components/lodash/lodash.js"></script>
-	<!-- endbuild -->
+	<script src="js/libs.js"></script>
 
 	<!-- Angular external libraries for application -->
-	<!-- build:angularlibs js/angularlibs.js -->
-	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-	<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-	<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
-	<!-- endbuild -->
+	<script src="js/angularlibs.js"></script>
 
 	<!-- Angular components -->
-	<!-- build:appcomponents js/appcomponents.js -->
-	<script type="text/javascript" src="app/app.js"></script>
-	<script type="text/javascript" src="app/config.js"></script>
-	<script type="text/javascript" src="app/components/services/LocalStorage.service.js"></script>
-	<script type="text/javascript" src="app/components/services/queryService.service.js"></script>
-	<script type="text/javascript" src="app/components/directives/responsive.nav.directive.js"></script>
-	<!-- endbuild -->
+	<script src="js/appcomponents.js"></script>
 
 	<!-- Application sections -->
-	<!-- build:mainapp js/mainapp.js -->
-	<script type="text/javascript" src="app/factory.js"></script>
-	<script type="text/javascript" src="app/controllers/SetupController.js"></script>
-	<script type="text/javascript" src="app/controllers/PlayController.js"></script>
-	<script type="text/javascript" src="app/controllers/ResultsController.js"></script>
-	<!-- endbuild -->
+	<script src="js/mainapp.js"></script>
 
 	<!-- templates from $templateCache -->
-	<!-- build:templates -->
-	<!-- endbuild -->
+	<script type="text/javascript" src="js/templates.js"></script>
 
 </html>
