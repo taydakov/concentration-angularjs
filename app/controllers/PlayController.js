@@ -43,12 +43,13 @@
     for (var i = 0; i < (pairsNumGoal * 2); i++) {
       self.cards.push({
         number: i,
-        rank: cardRanks[        (i % cardRanks.length)],
-        suit: cardSuits[parseInt(i / cardRanks.length)],
+        rank: cardRanks[parseInt(i / cardSuits.length)],
+        suit: cardSuits[        (i % cardSuits.length)],
         flipped: false,
         matched: false
       });
     }
+    shuffle(self.cards);
 
     /* Event Handlers */
     self.handleCardClick = function (card) {
@@ -111,6 +112,11 @@
       if (pairsMatched >= pairsNumGoal) {
         $location.path('/results');
       }
+    }
+
+    function shuffle (o) {
+      for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+      return o;
     }
 
   }
