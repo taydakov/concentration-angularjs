@@ -8,6 +8,8 @@
  * @date                  September 2015
  * @license               MIT
  * 
+ * @original-author       Jozef Butko (https://github.com/jbutko/AngularJS-Boilerplate)
+ *
  */
 ;(function() {
 
@@ -21,16 +23,11 @@
     ])
     .config(config);
 
-  // safe dependency injection
-  // this prevents minification issues
   config.$inject = ['$routeProvider', '$locationProvider', '$httpProvider', '$compileProvider'];
 
   /**
    * App routing
    *
-   * You can leave it here in the config section or take it out
-   * into separate file
-   * 
    */
   function config($routeProvider, $locationProvider, $httpProvider, $compileProvider) {
 
@@ -61,9 +58,8 @@
 
   }
 
-
   /**
-   * You can intercept any request or response inside authInterceptor
+   * Intercept any request or response inside authInterceptor
    * or handle what should happend on 40x, 50x errors
    * 
    */
@@ -107,7 +103,7 @@
 
   function run($rootScope, $location) {
 
-    // put here everything that you need to run on page load
+    // page load logic
 
   }
 
