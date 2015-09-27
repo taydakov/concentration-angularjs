@@ -2,7 +2,7 @@
 
 
   /**
-   * Concenctration game logic factory
+   * Concenctration game service factory
    *
    * Stores the state of the game, performs all the actions and notifies the app about changes
    * 
@@ -151,18 +151,6 @@
         return false;
       }
     }
-
-    // return {
-    //   /* Methods */
-    //   generateCards: generateCards,
-    //   flipCard:      flipCard,
-    //   /* Properties */
-    //   cards:        cards,
-    //   pairsTotal:   pairsTotal,
-    //   matchesGoal:  matchesGoal,
-    //   matchesFound: matchesFound,
-    //   /* Callbacks */
-    // }
 
     return function (pairsNum) {
       return new ConcentrationGame(pairsNum);

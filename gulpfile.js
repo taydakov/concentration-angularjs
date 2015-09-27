@@ -4,6 +4,7 @@
  * @date    September 2015
  * @license MIT
  *
+ * @original-author: Jozef Butko (https://github.com/jbutko/AngularJS-Boilerplate)
  *
  * The build process consists of following steps:
  * 1. clean /_build folder
