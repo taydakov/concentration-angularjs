@@ -10,9 +10,9 @@
     .module('concentrationGameApp')
     .controller('SetupController', SetupController);
 
-  SetupController.$inject = ['$location', 'concentrationGame'];
+  SetupController.$inject = ['$location'];
 
-  function SetupController($location, concentrationGame) {
+  function SetupController($location) {
 
     var self = this;
 
