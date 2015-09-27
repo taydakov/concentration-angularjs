@@ -259,7 +259,7 @@ gulp.task('default', ['browser-sync', 'sass', 'minify-css'], function() {
 gulp.task('build', function(callback) {
   runSequence(
     'clean:build',
-    'sass:build',
+    // 'sass:build',
     'images',
     'templates',
     'usemin',
