@@ -15,31 +15,36 @@
   function PlayController($routeParams, $location, $scope) {
 
     /* Private Constants & Variables */
-    var maxCardsNum = 52;
-    var minCardsNum = 2;
+    var maxPairsNum = 26;
+    var minPairsNum = 1;
+    var cardRanks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
+    var cardSuits = ['clubs', 'spades', 'diamonds', 'hearts'];
     var self = this;
-    var cardsNum    = parseInt($routeParams.pairsNum) * 2;
-    var isFlipped   = false;
-    var flippedCard = null;
+    var pairsNumGoal   = parseInt($routeParams.pairsNum);
+    var pairsMatched   = 0;
+    var isFlipped      = false;
+    var flippedCard    = null;
+
+    /* Params verification */
+    if (pairsNumGoal > maxPairsNum) {
+      pairsNumGoal = maxPairsNum;
+    } else if (pairsNumGoal < minPairsNum) {
+      pairsNumGoal = minPairsNum;
+    }
 
     /* Public data */
     self.cards = [];
+    self.percentageDone = 0;
+    self.pairsLeft      = pairsNumGoal - pairsMatched;
 
-    /* Params verification */
-    if (cardsNum > maxCardsNum) {
-      cardsNum = maxCardsNum
-    } else if (cardsNum < minCardsNum) {
-      cardsNum = minCardsNum;
-    }
-
-    console.log('controller started cardsNum = ', cardsNum);
+    console.log('controller started pairsNumGoal = ', pairsNumGoal);
 
     /* Fill cards array */
-    for (var i = 0; i < cardsNum; i++) {
+    for (var i = 0; i < (pairsNumGoal * 2); i++) {
       self.cards.push({
-        number:  i,
-        ranking: i,
-        color:   true, // false - black, true - red
+        number: i,
+        rank: cardRanks[        (i % cardRanks.length)],
+        suit: cardSuits[parseInt(i / cardRanks.length)],
         flipped: false,
         matched: false
       });
@@ -63,6 +68,12 @@
         // Flip the second card in a pair and check
         card.flipped = true;
 
+        if ((card.rank === flippedCard.rank)
+            && hasSameColor(card, flippedCard)) {
+          console.log('match!');
+          registerMatch(card, flippedCard);
+        }
+
         isFlipped   = true;
         flippedCard = null;
       } else if (isFlipped && !flippedCard) {
@@ -78,6 +89,29 @@
         flippedCard = card;
       }
     };
+
+    /* Helpers */
+    function hasSameColor (card1, card2) {
+      if (((card1.suit === 'clubs' || card1.suit === 'spades') && (card2.suit === 'clubs' || card2.suit === 'spades'))
+          || ((card1.suit === 'diamonds' || card1.suit === 'hearts') && (card2.suit === 'diamonds' || card2.suit === 'hearts'))){
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function registerMatch (card1, card2) {
+      card1.matched = true;
+      card2.matched = true;
+
+      pairsMatched += 1;
+      self.pairsLeft      = pairsNumGoal - pairsMatched;
+      self.percentageDone = pairsMatched / pairsNumGoal * 100;
+
+      if (pairsMatched >= pairsNumGoal) {
+        $location.path('/results');
+      }
+    }
 
   }
 
