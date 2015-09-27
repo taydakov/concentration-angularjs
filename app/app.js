@@ -1,14 +1,14 @@
 /**
  * 
  * Concentration Game in AngularJS
- * @description           Classical cards matching game written in AngularJS
- * @author                Lev Taydakov
- * @url                   taydakov.com
- * @version               0.0.1
- * @date                  September 2015
- * @license               MIT
+ * @description Classical cards matching game written in AngularJS
+ * @author      Lev Taydakov
+ * @url         taydakov.com
+ * @version     0.0.1
+ * @date        September 2015
+ * @license     MIT
  * 
- * @original-author       Jozef Butko (https://github.com/jbutko/AngularJS-Boilerplate)
+ * @boilerplate-author Jozef Butko (https://github.com/jbutko/AngularJS-Boilerplate)
  *
  */
 ;(function() {
