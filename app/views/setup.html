@@ -1,9 +1,12 @@
-<div class="concentration-label">Concentration Game</div>
+<main-title></main-title>
 <div class="difficulty-selection">
   <span class="difficulty-label">Choose difficulty</span>
   <ul class="difficulty-levels">
-    <li><div class="hard-level btn btn-danger" ng-click="setup.play(setup.hardPairsNum)"><span class="level-label">Hard</span><span class="level-pairs">{{ setup.hardPairsNum }} pairs</span></div></li>
-    <li><div class="medium-level btn btn-warning" ng-click="setup.play(setup.mediumPairsNum)"><span class="level-label">Medium</span><span class="level-pairs">{{ setup.mediumPairsNum }} pairs</span></div></li>
-    <li><div class="easy-level btn btn-default" ng-click="setup.play(setup.easyPairsNum)"><span class="level-label">Easy</span><span class="level-pairs">{{ setup.easyPairsNum }} pairs</span></div></li>
+    <li ng-repeat="level in setup.levels">
+    	<div class="hard-level btn" ng-class="level.CLASS" ng-click="setup.play(level.PAIRS_NUM)">
+    		<span class="level-label">{{ level.TITLE }}</span>
+    		<span class="level-pairs">{{ level.PAIRS_NUM }} pairs</span>
+    	</div>
+    </li>
   </ul>
 </div>
