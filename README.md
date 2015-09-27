@@ -1,19 +1,6 @@
 # Concentration Game written in AngularJS
 Classical cards matching game written in AngularJS, read more on [the Wikipedia page](https://en.wikipedia.org/wiki/Concentration_(game))
 
-# Features
-* SASS support including sourceMaps
-* Minimal CSS styling of the view
-* Gulp watch, build and local server tasks
-* Responsive navigation
-* Owl slider directive
-* localStorage service for set, get, remove data
-* queryService $http wrapper to handle calls
-* clear folder structure
-* less than 10 request in build version
-* minified CSS and JS build files
-* google analytics snippet
-
 ## Download
 ```bash
 git clone https://github.com/taydakov/concentration-angularjs
