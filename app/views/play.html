@@ -2,7 +2,7 @@
 <div class="flip-cards-container">
   <ul class="flip-cards-grid">
     <li class="flip-card" ng-repeat="card in play.cards">
-      <div class="flip-container">
+      <div class="flip-container" ng-class="{flipped: card.flipped}" ng-click="play.handleCardClick(card)">
         <div class="flipper">
           <div class="flip-card-front">
             <img class="flip-card-image" src="/images/cards/hidden_card.png" />

@@ -20,7 +20,7 @@
 .flip-container {
   perspective: 1000;
 }
-.flip-container:hover .flipper {
+.flip-container.flipped .flipper {
   transform: rotateY(180deg);
 }
 .flipper {
