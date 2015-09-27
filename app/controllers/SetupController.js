@@ -7,12 +7,12 @@
 ;(function() {
 
   angular
-    .module('concentrationGame')
+    .module('concentrationGameApp')
     .controller('SetupController', SetupController);
 
-  SetupController.$inject = ['$location'];
+  SetupController.$inject = ['$location', 'concentrationGame'];
 
-  function SetupController($location) {
+  function SetupController($location, concentrationGame) {
 
     var self = this;
 

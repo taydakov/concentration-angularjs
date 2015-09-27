@@ -204,7 +204,7 @@ gulp.task('templates', function() {
     ])
     .pipe($.minifyHtml())
     .pipe($.angularTemplatecache({
-      module: 'concentrationGame'
+      module: 'concentrationGameApp'
     }))
     .pipe(gulp.dest('_build/js'));
 });

@@ -7,7 +7,7 @@
 ;(function() {
 
   angular
-    .module('concentrationGame')
+    .module('concentrationGameApp')
     .controller('PlayController', PlayController);
 
   PlayController.$inject = ['$routeParams', '$location', '$scope'];

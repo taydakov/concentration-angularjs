@@ -16,7 +16,7 @@
    * Definition of the main app module and its dependencies
    */
   angular
-    .module('concentrationGame', [
+    .module('concentrationGameApp', [
       'ngRoute'
     ])
     .config(config);
@@ -68,12 +68,12 @@
    * 
    */
   angular
-    .module('concentrationGame')
+    .module('concentrationGameApp')
     .factory('authInterceptor', authInterceptor);
 
-  authInterceptor.$inject = ['$rootScope', '$q', 'LocalStorage', '$location'];
+  authInterceptor.$inject = ['$rootScope', '$q', '$location'];
 
-  function authInterceptor($rootScope, $q, LocalStorage, $location) {
+  function authInterceptor($rootScope, $q, $location) {
 
     return {
 
@@ -100,7 +100,7 @@
    * Run block
    */
   angular
-    .module('concentrationGame')
+    .module('concentrationGameApp')
     .run(run);
 
   run.$inject = ['$rootScope', '$location'];

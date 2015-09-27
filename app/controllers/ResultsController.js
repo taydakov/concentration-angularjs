@@ -7,7 +7,7 @@
 ;(function() {
 
   angular
-    .module('concentrationGame')
+    .module('concentrationGameApp')
     .controller('ResultsController', ResultsController);
 
   ResultsController.$inject = ['$location'];
